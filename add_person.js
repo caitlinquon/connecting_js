@@ -26,8 +26,7 @@ function insert_person(firstname, lastname, birthdate){
     if (err) return console.log(err);
     console.log('Added!');
     })
+    knex.destroy();
   }
 
 insert_person(process.argv[2], process.argv[3], process.argv[4]);
-
-knex.destroy();
